@@ -1,4 +1,4 @@
-import { object, string , nativeEnum  , infer as InferType} from "zod";
+import { object, string , nativeEnum  , infer as InferType, number} from "zod";
 
 const hospitalType = ['PRIVATE' , 'PUBLIC'] as const
 
@@ -10,13 +10,14 @@ enum HosType {
 const HosTypeEnum = nativeEnum(HosType);
   
 export const columnsConfigSchema = object({
-    id : string().default(''),
-    name : string().default('') ,
-    address : string().default('') ,
-    lat : string().default('') ,
-    lan : string().default('') ,
-    area : string().default('') ,
-    type : HosTypeEnum.default(HosType.PRIVATE) ,
+    Id : number(),
+    Name : string().default('') ,
+  Address : string().default('') ,
+    Lat : number() ,
+    Lng : number() ,
+    Area : string().default('') ,
+    // Type : HosTypeEnum.default(HosType.PRIVATE) ,
+    Type : string().default("PRIVATE")
 
 })
 

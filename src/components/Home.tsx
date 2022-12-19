@@ -1,11 +1,17 @@
 import React from 'react'
-import Table from './table/Table'
+import Search from './Search'
+import HospitalTable from './table/HospitalTable'
 
 function Home() {
   return (
-    <div>Home
+    <div style={{
 
-        <Table/>
+    }}>
+      <Search/>
+      <br />
+      <br />
+
+      <HospitalTable/>
     </div>
   )
 }
