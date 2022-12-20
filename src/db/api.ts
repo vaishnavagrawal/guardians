@@ -1,6 +1,6 @@
 import { ColumnsConfig } from "../schemas/column";
 
-const Hospitals : Array<ColumnsConfig>  = [
+const HospitalsObj : Array<ColumnsConfig>  = [
   {
     key: 1,
     Name: 'Max Super Speciality Hospital, Saket',
@@ -771,4 +771,4 @@ const Hospitals : Array<ColumnsConfig>  = [
 
 
 
-export default Hospitals
+export default HospitalsObj

@@ -8,7 +8,7 @@ function Home() {
   const Flex = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
-
+    
     variants: {
       justifyCenter: {
         true: {
