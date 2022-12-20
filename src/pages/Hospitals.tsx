@@ -19,7 +19,10 @@ function Hospitals() {
           <Button flat>OnBoarding</Button>
         </Link>
       </div>
-      <Grid.Container justify='space-between' css={{ w: '100%', p: '$10' }}>
+      <Grid.Container
+        justify='space-between'
+        css={{ w: '100%', p: '$10', marginTop: '60px' }}
+      >
         <div>
           <Search />
           <br />

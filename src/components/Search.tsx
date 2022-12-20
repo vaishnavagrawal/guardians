@@ -5,8 +5,6 @@ import React from 'react';
 import { cityStrAtom, hospitalAtom, hosStrAtom } from '../store/store.atom';
 
 function Search() {
-  const [searchStr, setSearchStr] = useAtom(hosStrAtom);
-
   const setHosStr = useUpdateAtom(hosStrAtom);
   const setCityStr = useUpdateAtom(cityStrAtom);
 
