@@ -10,7 +10,7 @@ function Hospitals() {
     <Grid.Container alignItems='center' css={{ minHeight: '100vh' }}>
       <div
         style={{
-          position: 'fixed',
+          position: 'absolute',
           right: '50px',
           top: '20px',
         }}
