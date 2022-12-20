@@ -19,9 +19,7 @@ function Home() {
   })
   return (
     <Flex >
-      sdfs 
     <div>
-
       <Search/>
       <br />
       <br />

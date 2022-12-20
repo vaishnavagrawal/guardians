@@ -10,7 +10,7 @@ enum HosType {
 const HosTypeEnum = nativeEnum(HosType);
   
 export const columnsConfigSchema = object({
-    Id : number(),
+    key : number(),
     Name : string().default('') ,
   Address : string().default('') ,
     Lat : number() ,

@@ -2,7 +2,7 @@ import { ColumnsConfig } from "../schemas/column";
 
 const Hospitals : Array<ColumnsConfig>  = [
   {
-    Id: 1,
+    key: 1,
     Name: 'Max Super Speciality Hospital, Saket',
     Address:
       '1 2, Press Enclave Marg, Saket Institutional Area, Saket, New Delhi, Delhi 110017',
@@ -12,7 +12,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 2,
+    key: 2,
     Name: 'Max Super Speciality Hospital, Shalimar Bagh',
     Address:
       'FC 50, Max Wali Rd, C and D Block, Shalimar Place Site, Shalimar Bagh, New Delhi, Delhi 110088',
@@ -22,7 +22,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 3,
+    key: 3,
     Name: 'Max Multi Speciality Centre, Panchsheel Park',
     Address:
       'N 110, Block N, Panchsheel Park North, Panchsheel Park, New Delhi, Delhi 110017',
@@ -32,7 +32,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 4,
+    key: 4,
     Name: 'BLK-Max Super Speciality Hospital, Delhi',
     Address:
       'Pusa Rd, Radha Soami Satsang, Rajendra Place, New Delhi, Delhi 110005',
@@ -42,7 +42,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 5,
+    key: 5,
     Name: 'Max Multi Speciality Centre, Noida',
     Address: 'A364, A Block, Pocket A, Sector 19, Noida, Uttar Pradesh 201301',
     Lat: 28.5767599,
@@ -51,7 +51,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 6,
+    key: 6,
     Name: 'Max Super Speciality Hospital, Patparganj',
     Address: '108A, IP Ext, I.P.Extension, Patparganj, Delhi, 110092',
     Lat: 28.6329328,
@@ -60,7 +60,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 7,
+    key: 7,
     Name: 'Max Hospital, Gurgaon',
     Address:
       'B Block, Sushant Lok 1, Near Huda City Centre MF Husain Marg Near Huda City Centre, Sector 43, Gurugram, Haryana 122001',
@@ -70,7 +70,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 8,
+    key: 8,
     Name: 'Max Super Speciality Hospital, Vaishali',
     Address:
       'W-3, Ashok Marg, near Radisson Blu Hotel, Sector-1, Vaishali, Ghaziabad, Uttar Pradesh 201012',
@@ -80,7 +80,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 9,
+    key: 9,
     Name: 'Max Institute of Cancer Care, Lajpat Nagar',
     Address:
       '1st floor, 110024, Ring Rd, Vikram Vihar, Lajpat Nagar IV, Lajpat Nagar, New Delhi, Delhi 110024',
@@ -90,7 +90,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 10,
+    key: 10,
     Name: 'Indraprastha Apollo Hospitals',
     Address: 'Sarita Vihar,Delhi Mathura Road, New Delhi – 110076 (India)',
     Lat: 28.5319249,
@@ -99,7 +99,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 11,
+    key: 11,
     Name: 'Apollo Hospitals, Noida',
     Address:
       'E 2, Sector 26 (Adjacent to Club 26), Noida – 201 301, Uttar Pradesh',
@@ -109,7 +109,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 12,
+    key: 12,
     Name: 'Artemis Hospital',
     Address: 'Sector 51, Gurugram, Haryana - 122001',
     Lat: 28.4320397,
@@ -118,7 +118,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 13,
+    key: 13,
     Name: 'Fortis Cancer Institute, Defence Colony',
     Address: 'E13 Ground Floor, Defence Colony, New Delhi, Delhi 110024',
     Lat: 28.5625674,
@@ -127,7 +127,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 14,
+    key: 14,
     Name: 'Fortis Hospital – Greater Noida',
     Address:
       'Block D, Industrial Area, Surajpur Site 4, Greater Noida, Uttar Pradesh – 201310',
@@ -137,7 +137,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 15,
+    key: 15,
     Name: 'Fortis Escorts Heart Institute, Okhla Road',
     Address: 'Okhla Road, New Delhi, Delhi 110025',
     Lat: 28.5610738,
@@ -146,7 +146,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 16,
+    key: 16,
     Name: 'Fortis Memorial Research Institute, Gurugram',
     Address: 'Sector - 44, Opposite HUDA City Centre, Gurugram, Haryana 122002',
     Lat: 28.458172,
@@ -155,7 +155,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 17,
+    key: 17,
     Name: 'Fortis Flt. Lt. Rajan Dhall Hospital, Vasant Kunj',
     Address:
       'Sector B, Pocket 1, Aruna Asaf Ali Marg,Vasant Kunj, New Delhi - 110070',
@@ -165,7 +165,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 18,
+    key: 18,
     Name: 'Fortis Hospital, Shalimar Bagh',
     Address: 'Fortis Hospital, A Block, Shalimar Bagh, New Delhi, Delhi 110088',
     Lat: 28.705282,
@@ -174,7 +174,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 19,
+    key: 19,
     Name: 'Fortis Hospital, Noida',
     Address: 'B-22, Sector 62, Gautam Buddh Nagar, Noida, Uttar Pradesh 201301',
     Lat: 28.6188495,
@@ -183,7 +183,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 20,
+    key: 20,
     Name: 'Fortis Escorts Hospital, Faridabad',
     Address: 'Neelam Bata Road, Opp. Neelam Cinema, Faridabad, Haryana 121001',
     Lat: 28.39193,
@@ -192,7 +192,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 21,
+    key: 21,
     Name: 'Fortis La Femme, Greater Kailash',
     Address: 'S - 549, Greater Kailash - II, New Delhi, Delhi 110048',
     Lat: 28.5291996,
@@ -201,7 +201,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 22,
+    key: 22,
     Name: 'Fortis C-DOC, Chirag Enclave',
     Address: 'B-16 Chirag Enclave, New Delhi -110048',
     Lat: 28.5469785,
@@ -210,7 +210,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 23,
+    key: 23,
     Name: 'Sir Ganga Ram Hospital',
     Address:
       'Sir Ganga Ram Hospital Marg, Old Rajinder Nagar, New Rajinder Nagar, New Delhi, Delhi 110060',
@@ -220,7 +220,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 24,
+    key: 24,
     Name: 'Medanta Gurgaon',
     Address: 'CH Baktawar Singh Road, Sector 38, Gurugram, Haryana 122001',
     Lat: 28.4397092,
@@ -229,7 +229,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 25,
+    key: 25,
     Name: 'Medanta DLF',
     Address:
       'Building No. 10C, Upper Ground Floor, DLF Cyber City, Phase II, Gurugram, Haryana 122002',
@@ -239,7 +239,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 26,
+    key: 26,
     Name: 'Medanta defence colony',
     Address: 'E – 18, Defence Colony, New Delhi, Delhi 110024',
     Lat: 28.5733536,
@@ -248,7 +248,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 27,
+    key: 27,
     Name: 'Medanta Medicentre',
     Address: 'Indira Gandhi International Airport, New Delhi, Delhi 110037',
     Lat: 28.5561624,
@@ -257,7 +257,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 28,
+    key: 28,
     Name: 'Medanta Moolchand',
     Address:
       'Medanta-Moolchand Heart Centre Moolchand Medcity, South Delhi Lajpat Nagar III, Near Moolchand Metro Station, New Delhi 110 024',
@@ -267,7 +267,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 29,
+    key: 29,
     Name: 'Medanta IT Park',
     Address:
       'Plot No.- 743 P, Islampur Village Sector -38 Gurugram, Haryana 122018',
@@ -277,7 +277,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 30,
+    key: 30,
     Name: 'SCI international hospital',
     Address:
       'M-4, M -Block, Landmark: M Block Market, Greater Kailash Part 1, Delhi',
@@ -287,7 +287,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 31,
+    key: 31,
     Name: 'Manipal Hospital',
     Address:
       'Palam Vihar Colony, Sector 6, Near MTNL Office, Dwarka Sector 6, Delhi',
@@ -297,7 +297,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 32,
+    key: 32,
     Name: 'St Stephens Hospital',
     Address: "St. Stephen's Hospital\nNear kashmiri Gate\nTis Hazari, Delhi",
     Lat: 28.6667971,
@@ -306,7 +306,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 33,
+    key: 33,
     Name: 'Apollo Spectra',
     Address:
       '66A, 2, New Rohtak Rd, near Liberty Cinema, Block 67, Karol Bagh, New Delhi, Delhi 110005',
@@ -316,7 +316,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 34,
+    key: 34,
     Name: 'Apollo Spectra Hospitals',
     Address:
       'R-2, Near, Nehru Place Flyover, Pocket 40/203 Nehru Enclave, Chittaranjan, Nehru Place, New Delhi, Delhi 110019',
@@ -326,7 +326,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 35,
+    key: 35,
     Name: 'Apollo Spectra Hospitals',
     Address:
       '13, Kailash Rd, Sant Nagar, East of Kailash, New Delhi, Delhi 110065',
@@ -336,7 +336,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 36,
+    key: 36,
     Name: 'Amrita Hospital, Faridabad',
     Address:
       'Mata Amritanandamayi Marg, RPS City, Sector 88, Faridabad, Haryana 121002',
@@ -346,7 +346,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 37,
+    key: 37,
     Name: 'Maharaja Agrasen Hospital',
     Address:
       'Plot No 1, Main Road, Dwarka Sector 1, Delhi - 110075, Near Bharat Petrol Pump & Palam Flyover',
@@ -356,7 +356,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 38,
+    key: 38,
     Name: 'Silverstreak Multispeciality Hospital',
     Address:
       'Sector 90 Road, Gurgaon Sector 87, Gurgaon - 122505, Opposite Cng Pump',
@@ -366,7 +366,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 39,
+    key: 39,
     Name: 'Pristyn Care',
     Address: 'Plot 448, 1st Floor, Dwarka, Sector 19, New Delhi, Delhi 110075',
     Lat: 28.586014,
@@ -375,7 +375,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 40,
+    key: 40,
     Name: 'Columbia Asia, Palam Vihar',
     Address:
       'Columbia Asia Hospital, Block F, Gol Chakkar, Near Ansal Plaza Mall, Palam Vihar, Gurugram, Haryana 122017',
@@ -385,7 +385,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 41,
+    key: 41,
     Name: 'Moolchand Medicity',
     Address:
       'Moolchand Medicity,\nLajpat Nagar -III,\nNear Moolchand Metro Station,\nNew Delhi 110024',
@@ -395,7 +395,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 42,
+    key: 42,
     Name: 'GB Pant Hospital',
     Address: '1, Jawaharlal Nehru Marg, New Delhi, Delhi 110002, India',
     Lat: 28.639301,
@@ -404,7 +404,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 43,
+    key: 43,
     Name: 'Dr. Ram Manohar Lohia Hospital, New Delhi',
     Address: 'Baba Kharak Singh Marg, Connaught Place, New Delhi - 110001.',
     Lat: 28.6293132,
@@ -413,7 +413,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 44,
+    key: 44,
     Name: 'Lok Nayak Jai Prakash Narayan Hospital',
     Address:
       '2, Near Delhi Gate,\nJawaharlal Nehru Marg,\nNew Delhi, Delhi 110002',
@@ -423,7 +423,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 45,
+    key: 45,
     Name: 'Batra Hospital & Medical Research Centre',
     Address:
       '1, Tughlakabad Institutional Area, Mehrauli Badarpur Road, Near Saket Metro Station, Tuglakabad, Delhi',
@@ -433,7 +433,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 46,
+    key: 46,
     Name: 'Dharamshila Narayana Superspeciality Hospital',
     Address:
       'Metro Station, Dharamshila marg, Vasundhara Enclave Near Ashok Nagar, Dallupura, New Delhi, Delhi 110096, New Ashok Nagar Metro Station, Vasundhra Enclave, Delhi',
@@ -443,7 +443,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 47,
+    key: 47,
     Name: 'Medeor Hospital',
     Address: 'B-33- 34., Near Katwaria Sarai, Qutab Institutional Area, Delhi',
     Lat: 28.5419572,
@@ -452,7 +452,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 48,
+    key: 48,
     Name: 'Jaypee Hospital',
     Address:
       'Jaypee Hospital Rd, Goberdhanpur, Sector 128, Noida, Uttar Pradesh 201304',
@@ -462,7 +462,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 49,
+    key: 49,
     Name: 'Aakash Healthcare, Dwarka, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -471,7 +471,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 50,
+    key: 50,
     Name: 'Asian Institute of Medical Sciences, Faridabad',
     Address: '',
     Lat: 28.4259429,
@@ -480,7 +480,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 51,
+    key: 51,
     Name: 'Cloudnine Hospital, Sector 47, Gurgaon',
     Address: '',
     Lat: 28.4601,
@@ -489,7 +489,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 52,
+    key: 52,
     Name: 'Dharamshila Narayana Superspeciality Hospital, New Delhi',
     Address: '',
     Lat: 28.6024541,
@@ -498,7 +498,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 53,
+    key: 53,
     Name: 'Medeor Hospital, Qutab, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -507,7 +507,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 54,
+    key: 54,
     Name: 'Metro Hospital and Cancer Institute, Preet Vihar, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -516,7 +516,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 55,
+    key: 55,
     Name: 'Metro Hospital and Multispeciality Institute, Sector 11, Noida, Noida',
     Address: '',
     Lat: 28.58,
@@ -525,7 +525,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 56,
+    key: 56,
     Name: 'Metro Hospital Park Group, Palam Vihar, Gurgaon',
     Address: '',
     Lat: 28.4601,
@@ -534,7 +534,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 57,
+    key: 57,
     Name: 'Metro Hospitals and Heart Institute, Lajpat Nagar, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -543,7 +543,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 58,
+    key: 58,
     Name: 'Metro Hospitals and Heart Institute, Sector 12, Noida',
     Address: '',
     Lat: 28.58,
@@ -552,7 +552,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 59,
+    key: 59,
     Name: 'Narayana Superspeciality Hospital, Gurugram, Gurgaon',
     Address: '',
     Lat: 28.4601,
@@ -561,7 +561,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 60,
+    key: 60,
     Name: 'Paras Hospital, Gurgaon',
     Address: '',
     Lat: 28.4509257,
@@ -570,7 +570,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 61,
+    key: 61,
     Name: 'Primus Super Speciality Hospital, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -579,7 +579,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 62,
+    key: 62,
     Name: 'Pushpawati Singhania Hospital and Research Institute, Delhi, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -588,7 +588,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 63,
+    key: 63,
     Name: 'Radiant Aesthetics Clinic, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -597,7 +597,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 64,
+    key: 64,
     Name: 'Rajiv Gandhi Cancer Hospitals, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -606,7 +606,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 65,
+    key: 65,
     Name: 'RG Hospital, Faridabad',
     Address: '',
     Lat: 28.3879595,
@@ -615,7 +615,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 66,
+    key: 66,
     Name: 'RG Hospital, Gagan Vihar, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -624,7 +624,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 67,
+    key: 67,
     Name: 'RG Hospital, Rajouri Garden, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -633,7 +633,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 68,
+    key: 68,
     Name: 'Sarvodaya Hospital and Research Center, Ghaziabad',
     Address: '',
     Lat: 28.66249,
@@ -642,7 +642,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 69,
+    key: 69,
     Name: 'Sarvodaya Hospital and Research Centre, Faridabad',
     Address: '',
     Lat: 28.4222263,
@@ -651,7 +651,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 70,
+    key: 70,
     Name: 'Sitaram Bhartia Institute of Science and Research, New Delhi',
     Address: '',
     Lat: 28.63576,
@@ -660,7 +660,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 71,
+    key: 71,
     Name: 'W Pratiksha Hospital, Gurgaon',
     Address: '',
     Lat: 28.4601,
@@ -669,7 +669,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PRIVATE',
   },
   {
-    Id: 72,
+    key: 72,
     Name: 'AIIMS',
     Address:
       'Sri Aurobindo Marg, Ansari Nagar, Ansari Nagar East, New Delhi, Delhi 110029',
@@ -679,7 +679,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 73,
+    key: 73,
     Name: 'Janakpuri Super Speciality Hospital',
     Address:
       'C2B, Janakpuri Lal Sai Mandir Marg Opposite Dussehra ground, New Delhi, Delhi 110058',
@@ -689,7 +689,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 74,
+    key: 74,
     Name: 'Dr Bhimrao Ambedkar Multispeciality Hospital',
     Address:
       'H8GQ+J7J, Maharaja Agrasen Marg, near Delhi Public School, Indergarhi, Sector 30, Noida, Uttar Pradesh 201303',
@@ -699,7 +699,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 75,
+    key: 75,
     Name: 'RAJIV GANDHI SUPER SPECIALITY HOSPITAL',
     Address:
       'Taharpur Rd, Taharpur, Taharpur Village, Dilshad Garden, New Delhi, Delhi 110093',
@@ -709,7 +709,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 76,
+    key: 76,
     Name: 'Poornima Sethi Multi Speciality Hospital',
     Address:
       'G7W5+388, Dd Block, Kalkaji Road, Kalkaji, near Nehru Place Sub Post Office, New Delhi, Delhi 110019',
@@ -719,7 +719,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 77,
+    key: 77,
     Name: 'District Government Multi Speciality Hospital',
     Address: 'Sector 39A, Sector 39, Noida, Uttar Pradesh 201303',
     Lat: 28.5720533,
@@ -728,7 +728,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 78,
+    key: 78,
     Name: 'Safdarjung Hospital',
     Address:
       'Ansari Nagar East, near to AIIMS Metro Station, New Delhi, Delhi 110029',
@@ -738,7 +738,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 79,
+    key: 79,
     Name: 'Maulana Azad Medical College (MAMC)',
     Address:
       '2, Bahadur Shah Zafar Marg, near Delhi Gate, Maulana Azad Medical College Campus, Balmiki Basti, New Delhi, Delhi 110002',
@@ -748,7 +748,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 80,
+    key: 80,
     Name: 'Employees State Insurance Corporation Hospital',
     Address:
       'Okhla Phase 1 Dsidc Sheds, Ma Anandmayee Marg, Okhla Industrial Estate, New Delhi, Delhi 110020',
@@ -758,7 +758,7 @@ const Hospitals : Array<ColumnsConfig>  = [
     Type: 'PUBLIC',
   },
   {
-    Id: 81,
+    key: 81,
     Name: 'Dr. Ram Manohar Lohia Hospital',
     Address:
       'Baba Kharak Singh Rd, near Gurudwara Bangla Sahib, Ram Manohar Lohia Hospital, Type III, Connaught Place, New Delhi, Delhi 110001',
