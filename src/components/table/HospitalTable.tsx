@@ -4,40 +4,60 @@ import { useAtom, useAtomValue } from 'jotai';
 import {
   createColumnHelper,
   flexRender,
-  getCoreRowModel,
   useReactTable,
 } from '@tanstack/react-table';
 
-import { hospitalAtom, searchAtom } from '../../store/store.atom';
-import { useEffect, useState } from 'react';
-import { ColumnsConfig } from '../../schemas/column';
+import { useEffect, useMemo, useState } from 'react';
 import Hospitals from '../../db/api';
+import { ColumnsConfig, columnsConfigSchema } from '../../schemas/column';
+import {
+  cityStrAtom,
+  hospitalAtom,
+  hosStrAtom,
+  selectedHospitalAtom,
+} from '../../store/store.atom';
+import { useUpdateAtom } from 'jotai/utils';
 
-const Columns = ['Name', 'Address', 'Lat', 'Lan', 'Area', 'Type'];
+// const Columns = ['Name', 'Address', 'Lat', 'Lan', 'Area', 'Type'];
 
 function HospitalTable() {
   const hospitalsAtomValue = useAtomValue(hospitalAtom);
-  const [searchStr, setSearchStr] = useAtom(searchAtom);
+
+  const setSelectedHospital = useUpdateAtom(selectedHospitalAtom);
+
+  const [hosStr] = useAtom(hosStrAtom);
+  const [cityStr] = useAtom(cityStrAtom);
   const [hospitals, setHospitals] = useState(hospitalsAtomValue);
+  const tableColumns = Object.keys(columnsConfigSchema).map((col) => ({
+    key: col,
+    label: col,
+  }));
 
-  console.log(hospitals);
+  const tableRows = useState(
+      hospitalsAtomValue.map((hos) => {
+        const { Id: Key, ...rest } = hos;
+        return {
+          ...rest,
+          Key: Key,
+        };
+      })
+    );
 
-  const filterTable = (str: string) => {
-    // console.log(hospitals.filter(hos => hos.Name.includes(str)))
-    setHospitals(hospitalsAtomValue.filter((hos) => (hos.Name).toLowerCase().includes(str)));
-  };
+
   useEffect(() => {
-    filterTable(searchStr);
-  }, [searchStr]);
-
-  type Person = {
-    firstName: string;
-    lastName: string;
-    age: number;
-    visits: number;
-    status: string;
-    progress: number;
-  };
+    setHospitals(
+      hospitalsAtomValue.filter((hos) =>
+        hos.Name.toLowerCase().includes(hosStr.toLowerCase())
+      )
+    );
+  }, [hosStr]);
+  useEffect(() => {
+    setHospitals(
+      hospitalsAtomValue.filter((hos) =>
+        hos.Area.toLowerCase().includes(cityStr.toLowerCase())
+      )
+    );
+  }, [cityStr]);
 
   const defaultData: ColumnsConfig[] = Hospitals;
 
@@ -89,67 +109,57 @@ function HospitalTable() {
 
   // } , [table])
 
+  console.log('tableRows', tableRows);
+
   return (
     <Table
       aria-label='Example table with static content'
       css={{
-        height: 'auto',
-        minWidth: '100%',
+        // height: 'auto',
+        minWidth: '500px',
       }}
       selectionMode='single'
       bordered
+      onSelectionChange={(keys) => {
+        console.log('keys', parseInt(Object.entries(keys)[0][1]));
+        setSelectedHospital(Object.entries(keys)[0][1]);
+      }}
     >
       <Table.Header>
         {table.getHeaderGroups()[0].headers.map((header) => {
           // return <div>{header.column.columnDef.header}</div>;
           return (
-            <Table.Column maxWidth={100} css={{
-              maxWidth : '100px'
-            }}>
+            <Table.Column>
               {flexRender(header.column.columnDef.header, header.getContext())}
             </Table.Column>
           );
         })}
-
-        {/* <Table.Column>ID</Table.Column>
-        <Table.Column>NAME</Table.Column>
-        <Table.Column>ADDRESS</Table.Column>
-        <Table.Column>LAT</Table.Column>
-        <Table.Column>LAN</Table.Column>
-        <Table.Column>AREA</Table.Column>
-        <Table.Column>TYPE</Table.Column> */}
       </Table.Header>
-
-      {/* <Table.Body>
-        {table.getRowModel().rows.map((row) => (
-          <Table.Row key={row.id}>
-            {row.getVisibleCells().map((cell) => (
-              <Table.Cell key={cell.id}>
-                {flexRender(cell.column.columnDef.cell, cell.getContext())}
-              </Table.Cell>
-            ))}
-          </Table.Row>
-        ))}
-      </Table.Body> */}
-
       <Table.Body>
         {Object.values(hospitals).map((hospital, i) => {
           return (
-            <Table.Row key={i}>
-              {Object.keys(hospital).map((key: any) => {
-                return <Table.Cell css={{
-textAlign : 'start',
-// maxWidth : '200px',
-// wordBreak : 'break-word'
-
-
-                }}>{hospital[key]}</Table.Cell>;
+            <Table.Row key={hospital.Id}>
+              {Object.keys(hospital).map((key) => {
+                return (
+                  <Table.Cell
+                    key={hospital.Id}
+                    css={{
+                      paddingX: '10px',
+                      textAlign: 'start',
+                      maxWidth: '200px',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
+                    {hospital[key as keyof typeof hospital]}
+                  </Table.Cell>
+                );
               })}
             </Table.Row>
           );
         })}
       </Table.Body>
-
       <Table.Pagination
         shadow
         noMargin
@@ -158,39 +168,6 @@ textAlign : 'start',
         onPageChange={(page) => console.log({ page })}
       />
     </Table>
-  );
-  return (
-    <div>
-      {table.getHeaderGroups()[0].headers.map((header) => {
-        // return <div>{header.column.columnDef.header}</div>;
-        return flexRender(header.column.columnDef.header, header.getContext());
-      })}
-
-      {table.getRowModel().rows.map((row) => (
-        <tr key={row.id}>
-          {row.getVisibleCells().map((cell) => (
-            <td key={cell.id}>
-              {flexRender(cell.column.columnDef.cell, cell.getContext())}
-            </td>
-          ))}
-        </tr>
-      ))}
-
-      {/* {table.getHeaderGroups().map(headerGroup => (
-      <tr key={headerGroup.id}>
-        {headerGroup.headers.map(header => (
-          <th key={header.id}>
-            {header.isPlaceholder
-              ? null
-              : flexRender(
-                  header.column.columnDef.header,
-                  header.getContext()
-                )}
-          </th>
-        ))}
-      </tr>
-    ))} */}
-    </div>
   );
 }
 

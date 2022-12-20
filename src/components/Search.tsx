@@ -1,10 +1,16 @@
-import { Input } from '@nextui-org/react';
+import { Input, Spacer } from '@nextui-org/react';
 import { useAtom } from 'jotai';
+import { useUpdateAtom } from 'jotai/utils';
 import React from 'react';
-import { hospitalAtom, searchAtom } from '../store/store.atom';
+import { cityStrAtom, hospitalAtom, hosStrAtom } from '../store/store.atom';
 
 function Search() {
-  const [searchStr, setSearchStr] = useAtom(searchAtom);
+  const [searchStr, setSearchStr] = useAtom(hosStrAtom);
+
+  const setHosStr = useUpdateAtom(hosStrAtom)
+  const setCityStr = useUpdateAtom(cityStrAtom)
+
+
     const [hospitals , setHospitals] = useAtom(hospitalAtom)
 
     const filterTable = (str : string ) =>{
@@ -12,26 +18,53 @@ function Search() {
         setHospitals(hospitals.filter(hos => hos.Name.includes(str)))
     }
 
-  const changeHandler = (e: any) => {
+  const hosHandler = (e: any) => {
     if(e.target.value===''){
 
     }
-    setSearchStr(e.target.value);
+    setHosStr(e.target.value);
+    // filterTable(e.target.value)
+  };  const cityHandler = (e: any) => {
+    if(e.target.value===''){
+
+    }
+    setCityStr(e.target.value);
     // filterTable(e.target.value)
   };
 
   return (
-    <Input
+    <div style={{
+        display : 'flex',
+    }}>
+
+<Input
       rounded
       bordered
       // label="Primary"
       placeholder='Hospital'
       color='primary'
-      width='100%'
-      onChange={changeHandler}
+fullWidth
+      onChange={hosHandler}
       clearable
+      
+  
+      />
+      <Spacer y={0.5} />
+      <Input
+      rounded
+      bordered
+      // label="Primary"
+      placeholder='City'
+      color='primary'
+      fullWidth
 
-    />
+
+      onChange={cityHandler}
+      clearable
+   
+      
+      />
+      </div>
   );
 }
 

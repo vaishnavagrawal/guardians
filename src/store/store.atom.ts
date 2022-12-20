@@ -8,4 +8,7 @@ import Hospitals from '../db/api';
 export const hospitalAtom = atom( Hospitals);
 
 
-export const searchAtom = atom<string>('')
+export const hosStrAtom = atom<string>('')
+export const cityStrAtom = atom<string>('')
+
+export const selectedHospitalAtom = atom('0')
